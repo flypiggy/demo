@@ -2,7 +2,7 @@
 
 ###Test 101
 * 测试基本概念 --输入,输出期待值
-* assert的使用
+* assert的使用 我们处处都在用到，调试，=，puts... and so on
 * 更多的assert
 
 ###Make better tests
