@@ -9,10 +9,10 @@
 * 最小测试环境
     * 独立的测试环境
     * testhelper
-    * 测试夹具(制作测试数据)
 * set up & tear down
 * mock & stub
 * 有效的组织测试
+* 测试夹具(制作测试数据)
 
 ###Write test friendly codes
 * 设计原则
