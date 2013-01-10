@@ -1,0 +1,19 @@
+namespace :db do
+  require "sequel"
+  Sequel.extension :migration
+
+  desc "setup test db"
+  task :setuptest do
+    DB = Sequel.sqlite('db/test.db')
+    Sequel::Migrator.run(DB, "db/migrations", :target => 001)
+    puts "<= sq:migrate:reset executed"
+  end
+
+  desc "setup dev db"
+  task :setupdev do
+    DB = Sequel.sqlite('db/development.db')
+    Sequel::Migrator.run(DB, "db/migrations", :target => 001)
+    puts "<= sq:migrate:reset executed"
+  end
+
+end

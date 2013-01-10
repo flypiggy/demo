@@ -4,7 +4,8 @@ gem 'sinatra'
 gem 'sequel'
 gem 'sqlite3'
 gem 'thin'
-gem "watchr"
+gem 'watchr'
+gem 'json'
 
 group :development do
   gem 'pry'
