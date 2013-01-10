@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'thin'
 gem 'watchr'
 gem 'json'
+gem 'twitter'
 
 group :development do
   gem 'pry'
