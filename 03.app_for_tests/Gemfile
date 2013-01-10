@@ -11,3 +11,8 @@ gem 'twitter'
 group :development do
   gem 'pry'
 end
+
+group :test do
+  gem 'factory_girl'
+  gem 'rack-test'
+end

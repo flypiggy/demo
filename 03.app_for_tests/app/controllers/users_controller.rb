@@ -1,7 +1,4 @@
 class UsersController < Sinatra::Base
-  get '/' do
-
-  end
 
   get '/users' do
     result = []

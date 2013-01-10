@@ -17,3 +17,25 @@ namespace :db do
   end
 
 end
+
+%w[unit functional integration].each do |type|
+  desc "run #{type} tests"
+  task "test:#{type}" do
+    Dir.glob "./test/#{type}/*_test.rb" do |f|
+      require "./test/test_helper"
+      require f
+    end
+  end
+
+  desc "run single file tests"
+  task "test:#{type}:file" do
+    file = "./test/#{type}/#{ENV["name"]}_test.rb"
+    if File.exists? file
+      require "./test/test_helper"
+      require file
+    else
+      puts "test file not found: #{file}"
+    end
+  end
+
+end
