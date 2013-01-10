@@ -5,6 +5,7 @@ ENV["RACK_ENV"] ||= "development"
 Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 
 require File.join(File.dirname(__FILE__), 'config', 'environment')
+require File.join(File.dirname(__FILE__), 'config', 'twitter')
 
 DB = Sequel.sqlite(DBPATH)
 

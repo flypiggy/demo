@@ -8,7 +8,6 @@ class UsersController < Sinatra::Base
     User.all.each do |val|
       result << val.values
     end
-
     result.to_json
   end
 
@@ -18,7 +17,14 @@ class UsersController < Sinatra::Base
     result.to_json
   end
 
-  get '/users/:id/tweets' do
+# 一开始错误的写法
+# get '/users/:id/tweets' do
+#   user = User.find(id: params[:id]).values
+#   result = Twitter.user_timeline(user[:twitter], count: 10).to_json
+# end
 
+  get '/users/:id/tweets' do
+    user = User.find id: params[:id]
+    result = user.get_tweets.to_json
   end
 end
