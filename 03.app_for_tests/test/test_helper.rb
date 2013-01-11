@@ -14,13 +14,9 @@ require "minitest/autorun"
 require "rack/test"
 
 class TestCase < MiniTest::Unit::TestCase
-
 end
 
 class FunctionalTestCase < TestCase
-  def app
-    @app ||= Sinatra.new(TrackMaster::Application) {}
-  end
 end
 
 

@@ -1,11 +1,14 @@
 class UsersControllerTest < FunctionalTestCase
   def setup
+    User.model.truncate
     @user = FactoryGirl.build(:li)
+    @user.save
   end
 
   def test_get_users
     get "/users"
 
+    p last_response.body
     assert_equal 200, last_response.status
   end
 

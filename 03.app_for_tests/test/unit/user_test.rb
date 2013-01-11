@@ -1,6 +1,8 @@
 class UserTest < TestCase
   def setup
+    User.model.truncate
     @user = FactoryGirl.build(:li)
+    @user.save
   end
 
   def test_user
