@@ -20,7 +20,7 @@ class FunctionalTestCase < TestCase
   include Rack::Test::Methods
 
   def app
-    Sinatra::Application
+    UsersController
   end
 end
 

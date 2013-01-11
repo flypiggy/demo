@@ -8,7 +8,6 @@ class UsersControllerTest < FunctionalTestCase
   def test_get_users
     get "/users"
 
-    p last_response.body
     assert_equal 200, last_response.status
   end
 
