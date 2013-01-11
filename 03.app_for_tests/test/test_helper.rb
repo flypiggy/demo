@@ -17,6 +17,11 @@ class TestCase < MiniTest::Unit::TestCase
 end
 
 class FunctionalTestCase < TestCase
+  include Rack::Test::Methods
+
+  def app
+    Sinatra::Application
+  end
 end
 
 
